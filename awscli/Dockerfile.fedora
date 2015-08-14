@@ -1,0 +1,10 @@
+FROM fedora:21
+
+RUN yum install -y \
+	python-pip \
+	groff \
+	&& yum clean all
+
+RUN pip install awscli
+
+CMD ["aws"]
